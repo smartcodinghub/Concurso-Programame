@@ -12,7 +12,7 @@ import java.io.InputStreamReader;
  *
  * @author usraux
  */
-public class F {
+public class F1 {
 
     /**
      * @param args the command line arguments
@@ -32,8 +32,8 @@ public class F {
                 
                 total += new Integer(cadena.charAt(j));
             } 
-            for(int j = total;j>=0;j--){
-                if(!(j%2==0 || j%3==0 || j%5==0 || j%7==0 || j%11==0 || j%13==0 || j%17==0 || j%19== 0)){
+            for(int j = total-1;j>=0;j--){
+                if(!(j%2==0 || j%3==0 || j%5==0 || j%7==0 || j%11==0 || j%13==0 || j%17==0)){
                    
                     System.out.println(j);
                     break;

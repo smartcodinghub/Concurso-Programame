@@ -13,7 +13,7 @@ import java.util.HashMap;
  *
  * @author usraux
  */
-public class G {
+public class G1 {
 
     /**
      * @param args the command line arguments
