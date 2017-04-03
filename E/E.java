@@ -25,7 +25,7 @@ public class E {
     public static void main(String[] args) throws IOException {
 
         InputStream s = System.in;
-        //s = new FileInputStream(".\\src\\E\\test.txt");
+        s = new FileInputStream(".\\src\\E\\test.txt");
 
         /* No uso try-withresources-catch muy caro para las mediciones que hacen en el concurso. 
          * En cualquir otro caso es obligatorio 
@@ -42,7 +42,6 @@ public class E {
 
     private static void ReadTunnel(BufferedReader in) throws IOException {
 
-        System.out.println("T---------T");
         String tunnel = in.readLine();
         int tunnelLength = tunnel.length();
         /* Half of the max value, so it won't be never over 500 */
@@ -70,7 +69,7 @@ public class E {
 
             found = found * -1 - 1;
 
-            int left = found == 0 ? -1 : tunnelTlf.get(found - 1);
+            int left = found == 0 ? 0 : tunnelTlf.get(found - 1);
             int right = found == tunnelLength || found >= tunnelTlf.size() ? tunnelLength : tunnelTlf.get(found);
 
             int leftDiff = position - left;
@@ -82,7 +81,7 @@ public class E {
                 System.out.println("ISLAS");
             } else {
 
-                if (left <= tunnelLength - position) {
+                if (left <= tunnelLength - 1 - right) {
                     System.out.println("PENINSULA");
                 } else {
                     System.out.println("ISLAS");
