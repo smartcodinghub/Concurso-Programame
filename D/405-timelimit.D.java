@@ -12,7 +12,7 @@ import java.io.InputStreamReader;
  *
  * @author usraux
  */
-public class D2 {
+public class D {
 
     /**
      * @param args the command line arguments
